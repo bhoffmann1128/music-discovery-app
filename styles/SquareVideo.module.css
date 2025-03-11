@@ -1,0 +1,98 @@
+
+.squareVideo {
+    width: 100%;
+    height: 400px;
+    overflow:hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:25px;
+}
+.squareAbreak {
+    background: transparent url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/abreak-circle-dark-purple.png) no-repeat;
+    background-size: 99%;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.abreakPoptext {
+    background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2022/01/abreak-logo-text-only-dropshadow.png);
+    left: 55px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    top: 125px;
+    opacity: 0;
+}
+.abreakPoptextAnimate {
+    background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2022/01/abreak-logo-text-only-dropshadow.png);
+    left: 55px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    top: 125px;
+    opacity:0;
+    -webkit-animation: showThenFade 3s ease-out;
+    -moz-animation: showThenFade 3s ease-out;
+    -o-animation: showThenFade 3s ease-out;
+    animation: showThenFade 3s ease-out;
+}
+.abreakSquareVideo {
+    width: 100%;
+    height: auto;
+}
+.squareBlackBackground {
+    background: black;
+    width: 100%;
+    height: 500px;
+    z-index: 1;
+}
+.posterImg {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+.abreakSquareVideo {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.squareVideoBtn {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 3;
+    background: transparent;
+    border: 0px;
+    opacity: .5;
+    font-size: 2em;
+    color: white;
+    margin-left: 15px;
+    font-size:7em;
+}
+
+@keyframes showThenFade {
+    
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: block;
+        opacity: 0;
+    }
+}
+

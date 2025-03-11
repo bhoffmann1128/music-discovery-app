@@ -1,0 +1,976 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Permanent+Marker&display=swap');*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Permanent+Marker&display=swap'); */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: rgb(80,40,134);
+    background: linear-gradient(90deg, rgba(80,40,168,1) 0%, rgba(80,40,168,1) 70%, rgba(38,0,88,1) 100%);
+    width:100%;
+    height:100%;
+}  
+
+.btnPlaying {
+  opacity: 0 !important;
+}
+
+h1,h2,h3,h4 {
+  font-family: "Comfortaa", sans-serif
+}
+
+.blue-callout {
+  background: #02c3fe
+}
+.blue-shadow {
+  color: #00c3fe;
+  text-shadow: 1px 1px 2px #2e0860;
+}
+
+.animated-list h2{
+  font-family: 'Permanent Marker', sans-serif !important;
+  font-size: .5em !important;
+  color: #00c3fe;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font-family: "Comfortaa", sans-serif;
+  transition:.3s;
+  text-align:center
+}
+.yellow-button {
+  background-color: #f4d602;
+  padding:10px 25px;
+  display:flex;
+  align-items:center
+}
+  .yellow-button:hover {
+    background-color: #ffe30d;
+  }
+  .yellow-button.premium-button span {
+    font-style:italic;
+    color: red;
+    padding-left:10px;
+  }
+  .gray-button {
+    background-color: #f1f1f1;
+    padding:10px 25px;
+    display:flex;
+    align-items:center
+
+  }
+
+  .yellow-button.small-button {
+    padding: 5px 10px;
+    font-size:.9em;
+  }
+.white-button {
+  color: #b069ff;
+  background: white;
+}
+.white-button:hover {
+  background-color: #b069ff;
+  color: white;
+}
+.purple-button {
+  background-color: #b069ff;
+  padding:10px 25px;
+  display:flex;
+  align-items:center;
+  color:white;
+}
+  .purple-button:hover {
+    background-color: #861cff;
+  }
+  .purple-button.active {
+    background-color: #531894;
+    color: white;
+    font-style:bold;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2 {
+  font-family: 'Comfortaa', sans-serif;
+}
+.btn-primary {
+  background: #f4d602;
+  color: black;
+  border: 0px;
+  border-radius: 0px;
+  opacity: 1 !important;
+  padding: 10px 25px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2em;
+  display:flex;
+  align-items:center
+}
+.page-title {
+  font-size: 4em !important;
+  color: #00c3fe;
+  text-shadow: 2px 2px 0px #2e0860;
+  margin-bottom: 25px;
+  line-height:1.1em;
+  font-family: "Comfortaa", sans-serif;
+}
+.center-content {
+  padding: 25px;
+}
+input[type="submit"] {
+  background:#f4d602 !important;
+  border: 0px !important;
+  color:black !important;
+}
+
+.nav-background {
+  background: rgb(80,40,134);
+  background: linear-gradient(275deg, rgba(80,40,134,1) 0%, rgba(80,40,175,1) 100%);
+}
+.navbar-left ul li{
+  padding-bottom: 8px;
+}
+  .navbar-left ul li a{
+    font-family: 'Comfortaa', sans-serif;
+    color:white;
+    font-size:.95em;
+    transition: all .3s
+  }
+  .navbar-left ul li a:hover {
+    color: #f100ff;
+  }
+  .navbar-left ul li a span {
+    color: #02c3fe;
+  }
+
+  .radio-callout {
+    position: absolute;
+    top: 65px;
+    left: 12vw;
+  }
+    .radio-callout-inner {
+      background: #50288d;
+      padding: 5px 10px;
+      color: white;
+      font-size: 13px;
+    }
+    .radio-callout-corner {
+      width: 0;
+      height: 0;
+      top: -18px;
+      left: -6px;
+      border-top: 20px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 30px solid #50288d;
+      transform: rotate(64deg);
+      position: absolute;
+    }
+.abreak-player {
+  background: rgb(32,192,229);
+  background: linear-gradient(273deg, rgba(32,192,229,1) 0%, rgb(0 195 255) 36%);
+}
+  .radio-button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 50px;
+    height:50px;
+    min-width: 50px;
+    min-height: 50px;
+    position:relative;
+  }
+    .radio-button-circle {
+      position:absolute;
+      height:50px;
+      width:auto;
+      margin:0;
+      padding:0;
+      z-index:0;
+      top:0;
+    }
+    .radio-button svg {
+      position:absolute;
+      left:15px;
+    }
+      svg.radio-button-stop {
+        left:13px
+      }
+  .onair {
+    color: #7a3cd3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+    text-align: center;
+    font-family: 'Comfortaa', sans-serif;
+  }
+      .onair h2 {font-size:30px; padding:0; margin:0;}
+      .onair h2 span:nth-child(1){animation: glow 1s ease-in-out infinite alternate;}
+			.onair h2 span:nth-child(2){animation: glow 1s ease-in-out infinite alternate; animation-delay: 50ms }
+			.onair h2 span:nth-child(3){margin-left:5px; animation: glow 1s ease-in-out infinite alternate;animation-delay: 75ms}
+			.onair h2 span:nth-child(4){animation: glow 1s ease-in-out infinite alternate; animation-delay: 85ms}
+			.onair h2 span:nth-child(5){animation: glow 1s ease-in-out infinite alternate; animation-delay: 100ms}
+			@keyframes glow {
+			  from {
+			    color: white;
+			  }
+			  to {
+			    color: #7a3cd3;
+			  }
+			}
+  .radio-meta {
+    font-family: "Comfortaa", sans-serif;
+    padding-left:10px;
+    width: 62%;
+  }
+    .radio-meta h3 {
+      font-size:14px;
+    }
+    .radio-meta h2 {
+      font-size:1.3em;
+      font-weight:bold;
+    }
+  .radio-promo {
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    justify-self:flex-end;
+    margin-right:5px;
+    width: 25%;
+  }
+    .radio-promo-inner {
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content:center;
+      height:160px;
+      animation: radioPromoAnimation 5s ease-out 1.2s infinite backwards;
+      width: 100%;
+    }
+      .radio-promo-inner a {
+        display: block;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        padding:0px;
+        margin:0px;
+      }
+      .radio-promo-inner a.live365Logo {
+        background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/08/Powered-by-Live365-%E2%80%93-column-left-align-%E2%80%93-dark.png);
+        background-size: 65%;
+        margin-top: -20px;
+      }
+      .radio-promo-inner a.iheartLogo {
+        background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/11/iheart-logo-vert-mobile.png);
+        background-size: 70%;
+        margin-top:-20px;
+      }
+
+      @media (max-width: 1000px) {
+
+        .radio-promo {
+          width: 80px;
+        }
+
+        .radio-promo-inner {
+          width: 80px;
+        }
+        .radio-promo-inner a.live365Logo {
+          background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/08/Powered-by-Live365-%E2%80%93-column-left-align-%E2%80%93-dark.png);
+          background-size: 70%;
+          margin-top: -20px;
+        }
+        .radio-promo-inner a.iheartLogo {
+          background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/11/iheart-logo-vert-mobile.png);
+          background-size: 70%;
+          margin-top:-20px;
+        }
+      }
+
+    @keyframes radioPromoAnimation{
+        0% { 
+            transform: translateY(0px); 
+        }
+        35% {
+          transform: translateY(0px); 
+        }
+        50%,85% {
+          transform: translateY(-75px);  
+        }
+        100% { 
+            transform: translateY(0px);  
+        }
+    }
+
+    .top-bar {
+      background: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/abreak-diagonal.jpg) repeat;
+      background-size:25%;
+    }
+
+.social-icons a {
+  transition: .3s all;
+}
+.social-icons.theme-light a {
+  font-size:2.5em;
+  color: #b069ff;
+  filter: drop-shadow(0px 0px 2px #cbcbcb);
+}
+.social-icons.theme-light a:hover {
+  font-size:2.5em;
+  color: #6c24be;
+}
+  .social-icons.theme-light a.twitterX svg {
+    height: 32px;
+    width: auto;
+    fill: #b069ff;
+  }
+  .social-icons.theme-light a.twitterX:hover svg {
+    fill: #6c24be;
+  }
+.social-icons.theme-dark a {
+  font-size:2em;
+}
+.social-icons.theme-dark a:hover {
+  color: #b069ff;
+}
+  .social-icons.theme-dark a.twitterX svg {
+      height: 32px;
+      width: auto;
+      fill: white;
+  }
+  .social-icons.theme-dark a.twitterX:hover svg {
+    fill: #b069ff;
+  }
+
+
+.footer-marquee h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.faq h3 {
+  font-size:1.4em;
+  margin-top: 25px;
+}
+  
+.abreak-form input {
+  font-size: 1.3em;
+  padding: .375rem 2.25rem .375rem .75rem;
+  border: 1px solid #b069ff;
+  background: #f1f1f1;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  color:#777;
+}
+  .abreak-form .form-error {
+    background: #ff0096;
+    color: white;
+    padding: 8px 20px 8px 20px;
+    margin-top: 5px;
+    display:inline-block;
+    font-size: .8em;
+  }
+  .abreak-form label:not(.genre-label) {
+    font-size:1.2em;
+    font-weight:bold;
+    font-family: "Comfortaa", sans-serif;
+    color: #4f28a7;
+  }
+  .abreak-form select {
+      display: block;
+      width: 100%;
+      padding: .375rem 2.25rem .375rem .75rem;
+      -moz-padding-start: calc(0.75rem - 3px);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+      background-size: 16px 12px;
+      border: 1px solid #b069ff;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  .genre-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 15px;
+  }
+    .genre-grid label {
+      padding-left:10px;
+    }
+  
+
+
+.service-select button{
+  text-align: center;
+  box-shadow: 0 0 5px #bdbcbc;
+  background: #f1f1f1;
+  align-items:center;
+  justify-content:flex-start;
+  display:flex;
+  flex-direction:column;
+  padding-bottom: 10px;
+  width: 100%;
+  height:100%;
+}
+.service-select button.active {
+  border:5px solid #b069ff;
+}
+  .service-select-icon {
+    padding: 25px 0px 0px 0px;
+    font-size:1.5em;
+  }
+  .service-select-icon svg {
+    color: #ccc;
+  }
+  .service-select button.active .service-select-icon svg {
+    color:green
+  }
+  .service-select h2 {
+    font-family:"Comfortaa", sans-serif;
+    font-size:2em;
+    border-bottom:1px solid white;
+    width: 100%;
+    padding: 15px 15px 10px;
+  }
+  
+  .service-select ul {
+    width: 100%;
+    padding:0;
+    margin:0;
+    margin-bottom: 10px;
+  }
+    .service-select ul li {
+      padding: 10px;
+    }
+    .service-select ul li:nth-child(odd){
+      background:white;
+    }
+    .service-select ul li.service-price{
+      background: #f4d602;
+      padding: 10px;
+      font-weight:bold;
+    }
+  .service-select svg{
+    margin: 0 auto;
+    font-size:1.75em;
+  }
+
+.modal-header {
+  background: rgb(80,40,134);
+  background: linear-gradient(183deg, rgba(80,40,168,1) 0%, rgba(80,40,168,1) 70%, rgba(38,0,88,1) 100%);
+  color:white;
+}
+  .song-edit-modal .modal-header {
+    background: rgb(32,192,229);
+    background: linear-gradient(273deg, rgba(32,192,229,1) 0%, rgb(0 195 255) 36%);
+  }
+  .modal-title {
+    padding: 25px;
+    background: #ededed;
+    color: rgb(80,40,134);
+  }
+  .song-edit-modal .border-area {
+    border: 5px solid #03c3fd;
+  }
+
+
+
+.termsScroll {
+  height: 400px;
+  overflow-y: scroll;
+}
+  .termsScroll p {
+    margin: 15px 0px;
+  }
+
+.slider-callouts h3 {
+    font-family:"Comfortaa",sans-serif;
+    color: #7a3cd3;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all .3s;
+}
+  .slider-callouts h3 span {
+    color:#02c3fe;
+  }
+  .slider-callouts p {
+    color: #333;
+    font-size:.85em
+  }
+  .slider-callouts .divider-purple {
+    background: transparent url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/abrak-diag-purple.jpg) repeat-x;
+    background-size: 100%;
+    height: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .slider-callouts .callout-slide {
+    padding: 10px;
+    cursor: pointer;
+    position:relative
+  }
+    .slider-callouts .filler-slide {
+      padding-bottom: 100px;
+    }
+    .slider-callouts .button-icon {
+      color: #1ec0e5;
+      font-size: 1.6em;
+      position:absolute;
+      top: 10px;
+      right: 10px;
+      transition: .3s all;
+    }
+    .callout-slide:hover .button-icon {
+      color: #00d0ff;
+    }
+
+
+  textarea {
+      width: 100%;
+      border-radius: 5px;
+      height: 150px;
+      border:2px solid #7a3cd3;
+      padding:10px;
+  }
+
+.form-step-guide-container {
+  background: #f1f1f1;
+  padding-top: 15px;
+}
+  .form-step-guide {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 25px 10vw 25px;
+  }
+
+  .formstep-title {
+    color: white;
+    background: #b069ff;
+  }
+
+  .form-step-guide>div {
+    background: #ccc;
+    padding: 12px 18px;
+    border-radius: 50%;
+    font-size: .8em;
+    text-align:center;
+    font-weight:bold;
+    font-family: "Comfortaa", sans-serif;
+  }
+  .form-step-guide>div.active {
+    background: #b069ff;
+    color:white
+  }
+
+  .subscription-select button {
+    width: 45%;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height: 200px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #bdbcbc;
+  }
+  .subscription-select button.active {
+    background:#f4d602;
+  }
+  .subscription-select button p {
+    line-height:1em
+  }
+  .subscription-select button h3 {
+    border-bottom: 5px solid #b069ff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  .subscription-select button svg {
+    color: rgb(173, 173, 173);
+    font-size:2em;
+    margin-bottom:10px;
+  }
+  .subscription-select button.active svg {
+    color:green;
+  }
+
+.dashboard-right {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #02c3fe;
+    color: #666 !important;
+    position: relative;
+}
+  .dashboard-right .tip {
+    display: block;
+    position: absolute;
+    right: -25px;
+    background: #02c3fc;
+    color: white;
+    padding: 5px 15px;
+    top: -5px;
+    transform: rotate(45deg);
+  }
+.dashboard-middle {
+  background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/abrak-diag-purple.jpg);
+  background-size: 20%;
+  background-repeat:repeat-x;
+  height: 20px;
+  width:100%;
+  margin: 0px 0px 0px 0px;
+}
+.dashboard-menu {
+  width: 100%;
+  background: rgb(163,98,235);
+  background: linear-gradient(275deg, rgba(163,98,235,1) 0%, rgba(176,105,255,1) 100%);
+  
+}
+  .placeholder-song {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #f4d602;
+    color: black;
+    margin-bottom: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+    .placeholder-song:hover {
+      background: #ffe51f;
+      color: black;
+      font-size: 1.2em;
+    }
+    .placeholder-song:hover svg {
+      color: rgb(32,192,229);
+      transition: .3s;
+    }
+
+  
+
+  .placeholder-song svg {
+    margin-right: 10px;
+  }
+  .profile-genre-list span:after {
+    content: ","
+  }
+  .profile-genre-list span:last-child:after {
+    content: ""
+  }
+  .dashboard-song {
+      background: rgb(32,192,229);
+      background: linear-gradient(273deg, rgba(32,192,229,1) 0%, rgb(0 195 255) 36%);
+      padding: 10px 2vw;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      color: white;
+  }
+    .dashboard-song h3 {
+      font-size:1.2em;
+    }
+    .dashboard-song button {
+      transition: .3s
+    }
+    .dashboard-song button:hover {
+      color: #f4d602 !important;
+    }
+    .dashboard-song svg {
+      font-size:2.5em !important;
+      padding: 5px 10px;
+      text-shadow: 0px 0px 2px rgb(79, 79, 79);
+    }
+
+.playlist-song-old {
+  display: grid; 
+  grid-template-columns: 6% 55px 130px 1fr 15%; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . ."; 
+    align-items: center
+}
+.playlist-song {
+  display: grid; 
+  grid-template-columns: 8% 110px 1fr 15%; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . . ."; 
+    align-items: center
+}
+  .recurrents .playlist-song {
+    grid-template-columns: 10px 110px 1fr 15%;
+  }
+  .playlist-song:nth-child(odd) {
+    background: #f1f1f1;
+  }
+  .playlist-song h3 {
+    font-size:1.2em;
+  }
+  .playlist-song h4 {
+    color: #cb43d6;
+    font-size:1.1em;
+  }
+  .playlist-song svg {
+    color: #b06aff;
+  }
+  .playlist-song .playlist-play-btn svg {
+    color: #310b6c;
+  }
+  .playlist-song .playlist-debut {
+    transform: rotate(-45deg);
+    display: block;
+    color: #502892;
+    text-shadow: 2px 2px 5px #8e8e8e;
+  }
+
+  .playlist-song .playlist-artist-location {
+    font-size: .9em;
+    color: #333;
+    font-style: italic;
+  }
+
+  .playlist-song .playlist-debut-abs {
+    /* transform: rotate(-45deg); */
+    display: block;
+    text-shadow: 2px 2px 5px #8e8e8e;
+    z-index: 2;
+    background: white;
+    font-size: 1em;
+    padding: 2px 15px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5px;
+    background-color: #bb66ff !important;
+    color: white;
+    /* left: -45px; */
+    box-shadow: 2px 2px 5px #ccc;
+  }
+  .playlist-songname {
+    /* white-space: nowrap; */
+    /* overflow:hidden; */
+  }
+
+.upload-modal .progress-block {
+  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  font-size:2em;
+  text-shadow: 0px 0px 5px #4988b1;
+}
+.upload-modal .border-area {
+  border: 5px solid #d954ba;
+    border-radius: 10%;
+    box-shadow: 0px 0px 100px #ffffff;
+}
+
+
+.wp-page-content p {
+  margin: 12px 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: .9em;
+}
+.wp-page-content p a {
+  color: #d954ba;
+  text-decoration:underline;
+}
+.wp-page-content blockquote {
+  padding: 10px 20px;
+    margin: 0 0 20px;
+    font-size: 17.5px;
+    border-left: 5px solid #eee;
+    border-color: #b069ff;
+}
+.wp-page-content h2 {
+  font-family: "Comfortaa",sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.wp-page-content .page-title {
+  padding-top: 25px;
+  line-height: 1em;
+}
+
+.checkout-paymenttype-select button {
+  border-radius: 10px; 
+  border: 1px solid #ccc;
+  width: 48%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-items:center;
+  align-items: center;
+  text-align:center;
+}
+.checkout-paymenttype-select button h2 {
+  font-size:1.1em
+}
+.checkout-paymenttype-select button h4{
+  font-weight:bold;
+  font-size:.9em
+}
+.checkout-paymenttype-select button.active {
+  background-color: #f4d602;
+}
+  .checkout-paymenttype-select button svg {
+    color: #ccc;
+    font-size:1.5em;
+    margin-bottom:10px;
+  }
+  .checkout-paymenttype-select button.active svg {
+    color: green;
+  }
+
+.mobile-nav { 
+  overflow:hidden;
+  transform:scaleX(0);
+}
+.mobile-nav.nav-toggle {
+  transform: scaleX(1);
+}
+.nav-toggle ul {
+  white-space: no-wrap;
+  overflow: hidden;
+}
+
+@keyframes navbar-animate{
+  0% { 
+    transform: scaleX(0); 
+  }
+
+  100% {
+    transform: scaleX(1); 
+  }
+}
+
+.register-callout {
+  background: #20c0e5;
+  font-family: "Comfortaa", sans-serif;
+}
+  .register-callout h2 {
+    text-shadow: 2px 2px 2px #50288f;
+    color:white;
+    font-size:1.75em
+  }
+
+.playlist-promo {
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #ea55f8;
+  color: white;
+  font-size: 20px;
+  margin-top:-25px;
+}
+
+.center-footer.vertical {
+  background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/purp-diag-lines-vert.png);
+  background-repeat: no-repeat;
+  background-size: 20px 100%;
+  background-position-x: 100%;
+}
+
+.coming-soon p {
+  font-family: "Permanent Marker", cursive;
+  color: #03c3fb;
+  font-size: 1.8em;
+  line-height: 1em;
+}
+
+
+.artistVideoGrid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". . . ."; 
+  align-content: center; 
+  align-items: start; 
+}
+  
+@media (prefers-color-scheme: dark) {
+
+}
+
+@media (max-width: 1024px) {
+
+  .account-nav img {
+    height: 100% !important;
+    margin: 0 auto
+  }
+}
+
+@media (max-width: 768px) {
+
+  .onair {
+    display:none
+  }
+  .playlist-promo {
+    margin-top:0px;
+  }
+  .playlist-songname {
+    font-size: .9em;
+  }
+  .playlist-song {
+    /* grid-template-columns: 5% 100px 1fr 20%; */
+    grid-template-columns: 12% 75px 1fr 20%;
+  }
+
+  .playlist-song .playlist-debut-abs {
+    font-size: .7em;
+    padding: 2px 15px;
+    bottom: 0px;
+  }
+  .wp-page-content .page-title {
+    font-size: 3em !important;
+  }
+  .recurrents .playlist-song {
+    grid-template-columns: 0% 75px 1fr 22%;
+  }
+
+  .radio-callout {
+    position: absolute;
+    top: 135px;
+    left: 8vw;
+  }
+  
+  
+
+  .genre-grid {
+    display: block;
+  }
+
+}

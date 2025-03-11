@@ -1,0 +1,125 @@
+
+.circleVideo {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: -4vh;
+}
+.circleAbreak {
+    background: transparent url(https://abreakmusic.wpengine.com/wp-content/uploads/2021/12/abreak-circle-dark-purple.png) no-repeat;
+    background-size: 99%;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.abreakPoptext {
+    background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2022/01/abreak-logo-text-only-dropshadow.png);
+    left: 55px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    top: 125px;
+    opacity: 0;
+}
+.abreakPoptextAnimate {
+    background-image: url(https://abreakmusic.wpengine.com/wp-content/uploads/2022/01/abreak-logo-text-only-dropshadow.png);
+    left: 55px;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+    top: 125px;
+    opacity:0;
+    -webkit-animation: showThenFade 3s ease-out;
+    -moz-animation: showThenFade 3s ease-out;
+    -o-animation: showThenFade 3s ease-out;
+    animation: showThenFade 3s ease-out;
+}
+.abreakCircleVideo {
+    width: 500px;
+    height: 500px
+}
+.circleBlackBackground {
+    background: black;
+    position: absolute;
+    width: 89%;
+    height: 89%;
+    border-radius: 50%;
+    z-index: 1;
+    left: 20px;
+}
+.posterImg {
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+    top: 28px;
+    left: 20px;
+}
+.abreakCircleVideo {
+    border-radius: 50%;
+    object-fit: cover;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 10px;
+}
+.circleVideoBtn {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 3;
+    background: transparent;
+    border: 0px;
+    opacity: .5;
+    font-size: 2em;
+    color: white;
+    margin-left: 15px;
+    font-size:7em;
+    transition: opacity 2s linear;
+}
+.circle-black-background {
+    background: black;
+    position: absolute;
+    width: 89%;
+    height: 89%;
+    border-radius: 50%;
+    z-index: 1;
+    left: 20px;
+}
+
+@media (max-width: 1000px) {
+
+    .circleVideo {
+        width:90vw;
+        height:90vw;
+        top: 0px;
+    }
+}
+
+@keyframes showThenFade {
+    
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        display: block;
+        opacity: 0;
+    }
+}
+
